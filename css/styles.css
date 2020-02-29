@@ -1,0 +1,440 @@
+
+              /* GENERAL TYPOGRAPHY */
+header {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+body {
+  padding-top: 50px;
+  font-family: 'Inconsolata', monospace;
+  font-size: 17px;
+}
+
+body, ul {
+  margin: 0;
+  padding: 0;
+}
+
+.skills-list {
+  font-family: 'Inknut Antiqua', serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Prata', serif;
+}
+
+h6.hike-project {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 60px;
+  color: #000000;
+  margin-bottom: 30px;
+  background-color: #f2f2f2;
+
+}
+@media screen and (max-width: 48em){
+  h6.hike-project{
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: normal;
+  }
+}
+
+p.hike-project{
+  margin: auto;
+  text-align: center;
+  line-height: 40px;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 48em){
+  p.hike-project{
+    margin:auto;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 15px;
+    line-height: 40px;
+  }
+}
+
+@media only screen and (min-width: 768px){
+  p.first{
+    margin-top: 200px;
+  }
+}
+
+p.role {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 48em){
+  p.role{
+    margin-top: 20px;
+    font-size: 14px;
+  }
+}
+
+
+h1 {
+  font-size: 90px;
+  font-weight: normal;
+  margin: 0;
+}
+
+h2 {
+  padding-bottom: 20px;
+}
+
+h3 {
+  font-size: 50px;
+  padding-top: 40px;
+
+}
+
+h4 {
+  font-size: 32px;
+  color: #402b34;
+  background-color: #FFE4E1;
+  display: inline-block;
+  padding: 1px;
+}
+
+a.contact {
+  color: black;
+}
+
+a.contact:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+h1 {
+  font-size: 80px;
+  line-height: 100px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  letter-spacing: 5px;
+}
+
+/* h2 {
+  font-size: 30px;
+  line-height: 130%;
+} */
+
+h1, h2 {
+  font-weight: normal;
+}
+
+ ul li {
+   list-style: none;
+   margin: 10px 0;
+   line-height: 150%;
+ }
+
+
+                /* END HEADINGS & TYPOGRAPHY */
+
+                /* IMAGES */
+
+
+img {
+    /* this is limiting the width of the image
+    so it takes 100% of the parent
+    Responsive style */
+    max-width: 100%;
+}
+
+.intro-img {
+  margin-bottom: 10px;
+  /* box-shadow: 1px 2px 30px rgba(0,0,0,0.2);  */
+  margin-top: 30px;
+}
+
+
+.logo {
+  max-width: 200px;
+}
+
+
+.bg-img {
+  /* The image used */
+  background-image: url('../img/header-img.png');
+  min-height: 250px;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Needed to position the navbar */
+  position: relative;
+}
+
+.skills-img {
+  background-image: url('../img/skillslist1.png');
+  min-height: 400px;
+  background-position: center;
+  backgroiund-repeat: no-repeat;
+  background-size: cover;
+  position:relative;
+}
+
+.work-img {
+  position: relative;
+  width: 100%;
+  box-shadow: 1px 2px 30px rgba(0,0,0,0.2);
+  margin-bottom: 60px;
+  padding: 40px;
+}
+
+.img-margin {
+  margin-bottom: 20px;
+}
+
+/* .extra-gutter {
+  padding: 80px;
+} */
+
+.footer-img {
+  /* The image used */
+  background-image: url('../img/footer-img.png');
+  min-height: 350px;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Needed to position the navbar */
+  position: relative;
+}
+
+                  /* END IMAGES */
+
+
+                  /* NAVIGATION */
+
+
+nav {
+  width: 100%;
+  margin: 40px 0;
+  position: fixed;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+
+}
+
+nav ul li {
+  display: inline-block;
+  overflow: auto;
+  margin: 0 20px; /* 0 refers to top & bottom // 15px == left & right:  */
+  padding: 0;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 17px;
+  margin-left: 30px;
+}
+
+
+nav li a {
+  text-decoration: none;
+  color: black;
+}
+
+
+nav ul {
+  margin: 20px auto;
+  /* text-align: center; */
+  /* padding: 30px; */
+}
+
+nav li a:hover {
+  /* text-decoration: underline; */
+  /* color: #FFE4E1; */
+  text-decoration: none;
+  color: black;
+  background-color: #EBEBEB;
+}
+
+.navbar-toggler-icon {
+  color: black;
+}
+
+.btn, .btn-secondary {
+  background-color: #FFE4E1;
+  border: none;
+  font-size: 16px;
+  text-align: justify;
+}
+
+
+          /* END NAVIGATION */
+
+          /*ID SECTION*/
+@media screen and (max-width: 48em){
+  .main{
+    text-align: center;
+
+    }
+}
+
+.main {
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+@media screen and (max-width: 48em){
+  .work{
+    text-align: center;
+
+    }
+}
+
+          /*END ID SECTION*/
+
+          /*SKILLSLIST*/
+.skills {
+  padding: 20px 0;
+}
+
+ .skills-list {
+   margin-top: 20px;
+   text-align: center;
+   font-size: 30px;
+   line-height: 150%;
+   margin-bottom: 40px;
+ }
+
+          /*END SKILLLISTS*?
+
+          /*WORK SECTION */
+
+.right-aligned{
+text-align: right;
+}
+
+.work h4.right-aligned {
+  right: 0;
+}
+.work h4 {
+position: absolute;
+z-index: 1;
+top: -25px;
+}
+
+.work a {
+  letter-spacing: 3px;
+  color: #402b34;
+  font-size: 18px;
+  text-decoration: underline;
+
+}
+
+.work p {
+  margin-top: 30px;
+  line-height: 30px;
+  color: #402b34;
+}
+
+.work h3 {
+  color: #000000;
+}
+
+.work h2 {
+  color: #000000;
+  font-size: 70px;
+  margin-bottom: 40px;
+  margin-top: 80px;
+  text-decoration: overline;
+}
+
+          /*END WORK SECTION*/
+
+          /*EXTRA UI*/
+/
+.button {
+  border: 1px solid black;
+  text-decoration: none;
+  color: black;
+  padding: 10px 30px;
+  display: inline-block;
+  border-radius: 20px;
+  margin-top: 30px;
+  /* so the transition is smooth */
+  transition: background 0.6s ease-in-out, color 0.6s ease-in-out;
+}
+
+.button:hover {
+  background: black;
+  color: white;
+}
+
+figcaption {
+  font-size: 8px;
+  margin-top: 10px;
+}
+
+ .project {
+   margin: 30px 0;
+   padding: 50px
+ }
+
+ .pink {
+   background-color: #FFE4E1;
+
+ }
+
+.project .button {
+  margin-top: 10px;
+}
+
+
+          /*FOOTER SECTION */
+
+
+footer {
+  text-align: center;
+  background-size: 100%;
+}
+
+
+footer, h2 {
+  margin-top: 30px;
+  font-size: 30px;
+  line-height: 55px;
+}
+
+a.contact{
+  text-decoration: none;
+}
+.contact {
+  margin-top: 80px;
+}
+                    /* ANIMATION */
+.eye {
+  width: 245px;
+  background: #FFE4E1;
+  margin-top: 100px;
+
+}
+
+g#XMLID_12_ {
+    animation: moveEye 5s infinite;
+    animation-direction: alternate;
+}
+
+@keyframes moveEye {
+  30% {
+    transform: translateX(-15px);
+  }
+  50% {
+    transform: translateY(6px) translateX(6px);
+  }
+  100% {
+    transform: translateY(-9px) translateX(-12px) scale(1.2);
+
+  }
+}
+
+          /* END ANIMATION */
