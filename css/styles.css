@@ -93,6 +93,7 @@ h2 {
 h3 {
   font-size: 50px;
   padding-top: 40px;
+  text-align: center;
 }
 
 h4 {
@@ -103,7 +104,7 @@ h4 {
   padding: 1px;
 }
 
-h3.hike-project{
+.hike-project h3{
   text-align: center;
   font-size: 30px;
   padding-bottom: 40px;
@@ -116,7 +117,7 @@ h3.hike-project{
   }
 }
 
-h4.hike{
+.hike h4{
   background-color: #f7f7f7;
   margin-top: 20px;
   font-size: 50px;
@@ -244,12 +245,10 @@ img {
     width: 100%;
   }
 }
-
-@media only screen and (min-width: 768px){
   .hike-img{
   padding: 50px;
   }
-}
+
                   /* END IMAGES */
 
 
