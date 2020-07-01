@@ -1,0 +1,194 @@
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box; /* Put padding on the inside of elements */
+}
+
+header{
+    position: fixed;
+    top: 0;
+    padding-bottom: 20px;
+}
+ul {
+    padding: 10px;
+    width: 100%;
+    list-style-type: none;
+}
+li a {
+    display: block;
+    text-decoration: none;
+    
+}
+
+
+
+[class^="icon--"] {
+    font-family: 'FontAwesome'; /* Apply icon font */
+    font-style: normal; /* Removes the default italics */
+}
+
+[class^="social-button"] {
+   	display: inline-flex; /* Display elements inline but turn them into a flex-container */
+	align-items: center; /* Centrally align the children vertically */
+	justify-content: center; /* Centrally align the children horizontally */
+
+   	height: 3.4rem; /* Create square */
+    width: 3.4rem; /* Create square */
+
+   	font-size: 1.4rem; /* Increase the default font size */
+    color: white; /* Make icon white */
+    
+    text-decoration: none; /* Remove default underline */
+
+    transition: background-color 150ms ease-in-out; /* Transition background colour on hover */
+
+    margin-right: 0.1rem;
+    margin-top: 3rem;
+}
+
+.icon--arrow::before {
+    content: '\f060';
+    color: #494D96;
+    text-decoration: none;
+}
+.social-button--arrow {
+    background-color: #ffffff; /* Facebook colour */
+}
+.social-button--arrow:hover {
+    background-color: rgba(255,6,168,.8); /* Pintrest hover colour */
+    text-decoration: none;
+}
+
+button.icon--arrow {
+    text-decoration-color: none;
+    background: none;
+    border: none;
+}
+div#myBtnContainer{
+    display: inline-block;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px; /* Our base font-size */
+	line-height: 1.75; /* Line height assumes an almost rem value but is dynamic to the font-size */
+	font-weight: 300; /* Use the included weight */
+	color: #332F21; /* Don't use black it's too harsh */
+
+	display: flex; /* Set body to be a flex container */
+	align-items: center; /* Vertically centre content in the viewport */
+	justify-content: center; /* Horizontally centre content in the viewport */
+
+	min-height: 100vh; /* Force vertical centering since the content won't always be taller than the viewport */
+	padding: 2rem; /* Using rem values as they don't cascade like em units and are not fixed units like pixels */
+
+	background-image: linear-gradient(rgba(73,77,150,8), rgba(255,6,168,.6)); /* Multiple Background images, semi-transparent gradient used as a fallback for Edge */
+    background-repeat: round;
+}
+
+@supports(background-blend-mode: multiply) { /* Use a blend mode on the background in browser that support it */
+
+	body {
+		background-image: linear-gradient(rgba(73,77,150,.8), rgba(73,77,150,.8)); /* Multiple background images, Gradient overlay and the Image */
+		background-blend-mode: multiply; /* Blending the Gradient with the Background Image (can't use black to blend) */
+	}
+}
+
+
+h4 {
+	font-family: 'IBM Plex Serif', serif;;
+    font-weight: 300;
+	font-size: 1.8rem; /* 36px based on 16px base font size */
+	line-height: 1.3333; /* Based on 36px font size and a 48px line-height */
+    padding-top: 10px;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column (if you want) */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide columns by default */
+}
+
+/* Clear floats after rows */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+    margin: 10px;
+  padding: 16px 22px;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* Add a grey background color on mouse-over */
+.btn:hover {
+  background-color: rgba(255,6,168,.8);
+    color: white;
+    text-decoration: underline;
+}
+
+/* Add a dark background color to the active button */
+.btn.active {
+  background-color: rgba(255,6,168,.8);
+   color: white;
+    text-decoration: underline;
+}
+
+
+@media only screen and (max-width: 53rem) { /* Base-spacing-unit * 30 */
+    
+    h1{
+        font-size: 18px;
+    }
+    
+
+	.row {
+        display: flex;
+		flex-direction: column; /* Align items along the horizontal axis */
+		min-height: 60vh;
+	}
+    .column {
+        width: 100%;
+    }
+
+}
