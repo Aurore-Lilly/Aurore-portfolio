@@ -204,7 +204,7 @@ p {
 	transform: scale(1.1) rotate(360deg); 
 }
 
-.icon--githun:hover {
+.icon--github:hover {
     text-decoration: none;
     webkit-transform: scale(1.1) rotate(360deg);
 	-moz-transform: scale(1.1) rotate(360deg);
