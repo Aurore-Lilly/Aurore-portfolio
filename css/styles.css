@@ -99,15 +99,15 @@ p {
 	/* The flex properties of the card header, footer and body allows the footer to always be at the bottom of the container */
 
 	.card__title {
-		margin-top: 0; 
+		margin-top: 0;
 	}
 
 @media only screen and (min-width: 53rem) { /* Base-spacing-unit * 30 */
-    
+
     h1{
         font-size: 18px;
     }
-    
+
 
 	.card {
 		flex-direction: row; /* Align items along the horizontal axis */
@@ -134,8 +134,8 @@ p {
 
 [class^="social-button"] {
    	display: inline-flex; /* Display elements inline but turn them into a flex-container */
-	align-items: center; /* Centrally align the children vertically */
-	justify-content: center; /* Centrally align the children horizontally */
+		align-items: center; /* Centrally align the children vertically */
+		justify-content: center; /* Centrally align the children horizontally */
 
    	height: 3rem; /* Create square */
     width: 3rem; /* Create square */
@@ -151,27 +151,41 @@ p {
     margin-right: 0.1rem;
 }
 
+@media only screen and (max-width: 414px){
+	[class^="social-button"] {
+		height: 2rem;
+		width: 2rem;
+		font-size: 1.2rem;
+	}
+}
+
 
 .icon--linkedin::before {
-    content: '\f0e1'; /* Unicode value for the twitter icon in our chosen icon font */
+    content: '\f0e1'; /* Unicode value for the linkedin icon in our chosen icon font */
     color: #ffffff;
     text-decoration: none;
 }
 
 .icon--github::before {
-    content: '\f1d3'; /* Unicode value for the twitter icon in our chosen icon font */
+    content: '\f09b'; /* Unicode value for the github icon in our chosen icon font */
     color: #Ffffff;
     text-decoration: none;
 }
 
+.icon--codepen::before {
+    content: '\f1cb'; /* Unicode value for the codepen icon in our chosen icon font */
+    color: #ffffff;
+    text-decoration: none;
+}
+
 .icon--instagram::before {
-    content: '\f16d'; /* Unicode value for the twitter icon in our chosen icon font */
+    content: '\f16d'; /* Unicode value for the instagram icon in our chosen icon font */
     color: #ffffff;
     text-decoration: none;
 }
 
 .icon--envelope::before {
-    content: '\f003'; /* Unicode value for the twitter icon in our chosen icon font */
+    content: '\f003'; /* Unicode value for the envelope icon in our chosen icon font */
     color: #Ffffff;
     text-decoration: none;
 }
@@ -183,6 +197,9 @@ p {
 }
 
 .social-button--github {
+    background-color: rgba(255,6,168,.8); /* Facebook colour */
+}
+.social-button--codepen {
     background-color: rgba(255,6,168,.8); /* Facebook colour */
 }
 
@@ -201,7 +218,7 @@ p {
 	-moz-transform: scale(1.1) rotate(360deg);
 	-ms-transform: scale(1.1) rotate(360deg);
 	-o-transform: scale(1.1) rotate(360deg);
-	transform: scale(1.1) rotate(360deg); 
+	transform: scale(1.1) rotate(360deg);
 }
 
 .icon--github:hover {
@@ -210,7 +227,16 @@ p {
 	-moz-transform: scale(1.1) rotate(360deg);
 	-ms-transform: scale(1.1) rotate(360deg);
 	-o-transform: scale(1.1) rotate(360deg);
-	transform: scale(1.1) rotate(360deg); 
+	transform: scale(1.1) rotate(360deg);
+}
+
+.icon--codepen:hover {
+  text-decoration: none;
+  webkit-transform: scale(1.1) rotate(360deg);
+	-moz-transform: scale(1.1) rotate(360deg);
+	-ms-transform: scale(1.1) rotate(360deg);
+	-o-transform: scale(1.1) rotate(360deg);
+	transform: scale(1.1) rotate(360deg);
 }
 
 .icon--instagram:hover {
@@ -219,7 +245,7 @@ p {
 	-moz-transform: scale(1.1) rotate(360deg);
 	-ms-transform: scale(1.1) rotate(360deg);
 	-o-transform: scale(1.1) rotate(360deg);
-	transform: scale(1.1) rotate(360deg); 
+	transform: scale(1.1) rotate(360deg);
 }
 
 .icon--envelope:hover {
@@ -228,7 +254,7 @@ p {
 	-moz-transform: scale(1.1) rotate(360deg);
 	-ms-transform: scale(1.1) rotate(360deg);
 	-o-transform: scale(1.1) rotate(360deg);
-	transform: scale(1.1) rotate(360deg); 
+	transform: scale(1.1) rotate(360deg);
 }
 
 .social-button--linkedin:hover {
@@ -237,6 +263,11 @@ p {
 }
 
 .social-button--github:hover {
+    background-color: #494D96; /* Pintrest hover colour */
+    text-decoration: none;
+}
+
+.social-button--codepen:hover {
     background-color: #494D96; /* Pintrest hover colour */
     text-decoration: none;
 }
@@ -250,7 +281,6 @@ p {
     background-color: #494D96; /* Pintrest hover colour */
     text-decoration: none;
 }
-
 
 
 
@@ -418,7 +448,7 @@ p {
         color: #ffffff;
     }
 
-	
+
     fullscreen-menu__nav a:hover,
 	.fullscreen-menu__nav a:focus,
 	.fullscreen-menu__nav a:active {
@@ -435,8 +465,8 @@ p {
 
 
 @media only screen and (min-width: 46rem) { /* When the viewport is large enough */
-    
-    
+
+
     h1 {
     font-family: 'Inknut Antiqua', serif;
     font-weight: 500;
@@ -501,5 +531,3 @@ g#XMLID_12_ {
 }
 
           /* END ANIMATION */
-
-
