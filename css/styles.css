@@ -23,19 +23,22 @@ body {
 	justify-content: center; /* Horizontally centre content in the viewport */
 
 	min-height: 100vh; /* Force vertical centering since the content won't always be taller than the viewport */
-	padding: 2rem; /* Using rem values as they don't cascade like em units and are not fixed units like pixels */
+	padding: 5rem; /* Using rem values as they don't cascade like em units and are not fixed units like pixels */
 
 	background-image: linear-gradient(rgba(255,6,168,.8), rgba(255,6,168,.6)), url('../img/background.png'); /* Multiple Background images, semi-transparent gradient used as a fallback for Edge */
 	background-position: center center;
 	background-size: cover;
+	background-image: linear-gradient(rgba(255,6,168,.03), rgba(255,6,168,.1)), url('../img/background.png'); /* Multiple background images, Gradient overlay and the Image */
+	background-blend-mode: multiply; /* Blending the Gradient with the Background Image (can't use black to blend) */
 }
 
-@supports(background-blend-mode: multiply) { /* Use a blend mode on the background in browser that support it */
-
+@media only screen and (max-width: 450px) {
 	body {
-		background-image: linear-gradient(rgba(255,6,168,.03), rgba(255,6,168,.1)), url('../img/background.png'); /* Multiple background images, Gradient overlay and the Image */
-		background-blend-mode: multiply; /* Blending the Gradient with the Background Image (can't use black to blend) */
+		padding: 2rem;
+		}
 	}
+
+@supports(background-blend-mode: multiply) { /* Use a blend mode on the background in browser that support it */
 }
 
 h1 {
@@ -59,14 +62,22 @@ p {
 	min-height: 55vh; /* Always at least 55% of the viewport */
 
 	background-color: white; /* Set background colour of our content card */
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle drop shadow */
+	box-shadow: 6px 6px 12px rgba(253,236,237, 0.7); /* Add a subtle drop shadow */
 }
 
 	.card__image-container {
 		background-image: url('../img/Aurore.png');
-        background-size: contain;
-        background-repeat: no-repeat;
+    background-size: contain;
+    background-repeat: no-repeat;
 		background-position: center center; /* Position the image in the middle */
+		margin: 20px;
+	}
+
+	@media only screen and (max-width: 450px){
+		.card__image-container {
+			margin: 9px;
+
+		}
 	}
 
 
