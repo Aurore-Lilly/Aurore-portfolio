@@ -61,7 +61,7 @@ p {
 	min-height: 55vh; /* Always at least 55% of the viewport */
 
 	background-color: white; /* Set background colour of our content card */
-	box-shadow: 6px 6px 12px rgba(253,236,237, 0.7); /* Add a subtle drop shadow */
+	box-shadow: 6px 6px 12px rgba(38,43,48, 0.7); /* Add a subtle drop shadow */
 }
 
 	.card__image-container {
@@ -101,6 +101,12 @@ p {
 		text-align: right; /* Align the contents of the footer to the right */
 	}
 
+	@media only screen and (max-width: 770px){
+		.card__footer {
+			text-align: center;
+		}
+	}
+
 	.card__body {
 		flex: 1 1 auto; /* Same as flex:1; */
 	}
@@ -109,6 +115,14 @@ p {
 
 	.card__title {
 		margin-top: 0;
+		font-size: 50px;
+	}
+
+	@media only screen and (max-width:770px){
+		.card__title {
+			font-size: 38px;
+			text-align: center;
+		}
 	}
 
 @media only screen and (min-width: 53rem) { /* Base-spacing-unit * 30 */
@@ -435,6 +449,7 @@ p {
 	a.title_nav {
 		text-decoration: none;
 		color: rgb(41,39,40);
+		font-size: 46px;
 	}
 
 	.fullscreen-menu__nav {
@@ -472,13 +487,9 @@ p {
 .fullscreen-menu [class^="social-button"] {
 	margin: 0 0.5rem; /* Add a larger margin between the social buttons in the menu overlay */
 	height: 3.75rem; /* Increase the size of the social buttons */
-    width: 3.75rem; /* Increase the size of the social buttons */
-    font-size: 1.5rem; /* Increase the size of the social icon inside the button */
+  width: 3.75rem; /* Increase the size of the social buttons */
+  font-size: 1.5rem; /* Increase the size of the social icon inside the button */
 }
-
-
-@media only screen and (min-width: 46rem) { /* When the viewport is large enough */
-
 
     h1 {
     font-family: 'Inknut Antiqua', serif;
@@ -491,9 +502,16 @@ p {
     p {
     font-family: 'IBM Plex Serif', serif;;
     font-weight: 300;
-    font-size: 18px;
-    line-height: 1.8em;
+    font-size: 14px;
+    line-height: 1.9em;
     }
+
+		@media only screen and (max-width: 770px){
+			p{
+				text-align:center;
+				font-size: 12px;
+			}
+		}
 
 	.fullscreen-menu-container {
 		display: flex; /* Add display flex to the container */
@@ -510,7 +528,6 @@ p {
 	}
 
     .fullscreen-menu__nav ul {
-        text-transform: uppercase;
         display: flex; /* Turn the unordered list into a flex-container */
         justify-content: space-between; /* Share the available space between the list items */
 		}
