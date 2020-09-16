@@ -25,10 +25,9 @@ body {
 	min-height: 100vh; /* Force vertical centering since the content won't always be taller than the viewport */
 	padding: 5rem; /* Using rem values as they don't cascade like em units and are not fixed units like pixels */
 
-	background-image: linear-gradient(rgba(255,6,168,.8), rgba(255,6,168,.6)), url('../img/background.png'); /* Multiple Background images, semi-transparent gradient used as a fallback for Edge */
 	background-position: center center;
 	background-size: cover;
-	background-image: linear-gradient(rgba(255,6,168,.03), rgba(255,6,168,.1)), url('../img/background.png'); /* Multiple background images, Gradient overlay and the Image */
+	background-image: linear-gradient(rgba(223,223,223,.03), rgba(223,223,223,.1)), url('../img/background.png'); /* Multiple background images, Gradient overlay and the Image */
 	background-blend-mode: multiply; /* Blending the Gradient with the Background Image (can't use black to blend) */
 }
 
@@ -314,13 +313,12 @@ p {
 	justify-content: center; /* Align horizontally */
 	align-items: center; /* Align vertically */
 
-	width: 4rem; /* Button width */
-	height: 4rem; /* Button height */
+	width: 3rem; /* Button width */
+	height: 3rem; /* Button height */
 	border-radius: 50%; /* Make the button a circle */
-	background-color: rgba(255,255,255,0.8); /* Make the background white and semi-transparent */
+	background-color: rgba(255,255,255,0.6); /* Make the background white and semi-transparent */
 	cursor: pointer;
-    text-decoration: none;
-
+  text-decoration: none;
 	transition: background-color 500ms ease-in-out; /* Add transition for the background-color */
 }
 
@@ -331,12 +329,12 @@ p {
 .menu-button:hover,
 .menu-button:focus,
 .menu-button:active {
-    background-color: rgba(255,6,168,0.8); /* On hover, transition the background-color and transparency */
+    background-color: rgba(255,6,168,0.6); /* On hover, transition the background-color and transparency */
 }
 
 .menu-icon {
 	position: relative; /* Give the menu-icon position relative so we can absolutely position children */
-    width: 2rem; /* Icon width */
+  width: 1.8rem; /* Icon width */
 	height: 1.5rem; /* Icon height */
 }
 
@@ -404,6 +402,7 @@ p {
 	opacity: 1; /* Transition opacity from 0 to 1 */
 	top: 0; /* Transition to the top of the viewport */
 	pointer-events: auto; /* Re-add pointer events to elements can be clicked again */
+	background-color: #fff;
 }
 
 .fullscreen-menu-container .menu-button {
@@ -433,6 +432,10 @@ p {
 		max-width: 30rem; /* Apply a different max-width to the title to achieve a more optimal reading lenght */
 		margin: 0 auto; /* Position in the horizontal center and remove top and bottom margins */
 	}
+	a.title_nav {
+		text-decoration: none;
+		color: rgb(41,39,40);
+	}
 
 	.fullscreen-menu__nav {
 		margin: 3rem 0; /* Apply top and bottom margin of the navigation */
@@ -446,20 +449,20 @@ p {
 
 	.fullscreen-menu__nav a {
 		display: block; /* Span the whole width */
-		font-size: 1.4rem; /* Increase the default font size */
+		font-size: 1.2rem; /* Increase the default font size */
 		padding: 1rem; /* Add padding to the button to increase the click/tap area */
-		color: #A2A2A2; /* Apply light grey colour */
+		color: rgb(41,39,40); /* Apply light grey colour */
 		text-decoration: none; /* Remove default underline */
 		transition: color 300ms ease-in; /* Add transition for the colour on hover */
 	}
 
-    fullscreen-menu__nav a:hover{
+    .fullscreen-menu__nav a:hover{
         background-color: rgba(255,6,168,3);
         color: #ffffff;
+				text-decoration: overline;
     }
 
 
-    fullscreen-menu__nav a:hover,
 	.fullscreen-menu__nav a:focus,
 	.fullscreen-menu__nav a:active {
 		background-color: rgba(255,6,168,3);
