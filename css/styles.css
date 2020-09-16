@@ -46,12 +46,6 @@ h1 {
     line-height: 2em;
 }
 
-p {
-    font-family: 'IBM Plex Serif', serif;;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 1.8em;
-}
 
 .card {
 	display: flex; /* Sets entrire card element to be a flex container */
@@ -134,7 +128,7 @@ p {
 
 	.card {
 		flex-direction: row; /* Align items along the horizontal axis */
-		min-height: 60vh;
+		min-height: 50vh;
 	}
 
 		.card__image-container {
@@ -491,6 +485,8 @@ p {
   font-size: 1.5rem; /* Increase the size of the social icon inside the button */
 }
 
+@media only screen and (min-width: 46rem) { /* When the viewport is large enough */
+
     h1 {
     font-family: 'Inknut Antiqua', serif;
     font-weight: 500;
@@ -502,16 +498,9 @@ p {
     p {
     font-family: 'IBM Plex Serif', serif;;
     font-weight: 300;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.9em;
     }
-
-		@media only screen and (max-width: 770px){
-			p{
-				text-align:center;
-				font-size: 12px;
-			}
-		}
 
 	.fullscreen-menu-container {
 		display: flex; /* Add display flex to the container */
@@ -532,6 +521,13 @@ p {
         justify-content: space-between; /* Share the available space between the list items */
 		}
 
+}
+
+@media only screen and (max-width: 770px){
+	p{
+		text-align:center;
+		font-size: 12px;
+	}
 }
 
 
