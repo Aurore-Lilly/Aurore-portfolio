@@ -16,187 +16,342 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="css/work.css" type="text/css">
-    <script src="js/work.js"></script>
-    <script src="js/main.js"></script>
+
     </head>
 
-     <div class="main">
 
-        <div id="myBtnContainer">
 
-            <a target="_blank" href="index.html" class="social-button--arrow">
-            <button class="icon--arrow item"></button>
-            </a>
+      <div class="fullscreen-menu-container js-menu-container">
 
-            <button class="btn active item" onclick="filterSelection('all')"> All</button>
+          <a class="menu-button js-menu-close">
+          <div class="menu-icon is-active">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </a>
 
-            <button class="btn item" onclick="filterSelection('Graphic Design')"> Graphic Design</button>
+        <div class="fullscreen-menu">
 
-            <button class="btn item" onclick="filterSelection('Web Development')"> Web Development</button>
+          <div class="fullscreen-menu__image-container"></div>
 
-            <button class="btn item" onclick="filterSelection('UX | UI' )"> UX | UI</button>
-    </div>
+          <h1 class="fullscreen-menu__title"><a class="title_nav" href="work.html">Check my Work.</a></h1>
+
+          <nav class="fullscreen-menu__nav">
+            <ul>
+
+
+              <li>
+                <a target="_self" href="index.html">Home</a>
+              </li>
+
+              <li>
+                <a target="_self" href="work.html">Portfolio</a>
+              </li>
+
+              <li>
+                <a target="_blank" href="https://codepen.io/aurore-lilly">Codepen</a>
+              </li>
+
+              <li>
+                <a target="_blank" href="https://www.linkedin.com/in/aurore-martin-143607170/">Linkedin</a>
+              </li>
+
+              <li>
+                <a target="_blank" href="https://www.instagram.com/aurore.lilly/">Instagram</a>
+              </li>
+
+                          <li>
+                <a target="_blank" href="https://github.com/Aurore-Lilly">Git</a>
+              </li>
+
+              <li>
+                <a target="_blank" href="contact.html">Contact</a>
+              </li>
+
+            </ul>
+                  </nav>
+
+        </div>
+
+        </div>
+
+      <article class="card">
+
+        <aside class="card__image-container">
+
+          <a class="menu-button js-menu-button">
+            <div class="menu-icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </a>
+        </aside>
+      </article>
+
+
+<body>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="main">
+      <div id="myBtnContainer" class="btn-container">
+
+          <button class="btn active item" onclick="filterSelection('all')"> All</button>
+
+          <button class="btn item" onclick="filterSelection('Web Development')"> Web Development</button>
+
+          <button class="btn item" onclick="filterSelection('Graphic Design')"> Graphic Design</button>
+
+          <button class="btn item" onclick="filterSelection('UX | UI' )"> UX | UI</button>
+      </div>
+
+
+
 
     <!-- GALLERY GRID -->
+<div class= "row">
+  <div class="Web Development column">
+    <a class= "lightbox" href="#photo09">
+      <figure class="photo09"><h4>Margie & the Moon's Website</h4></figure>
+    </a>
 
+    <!-- <div class= "lightbox-target" id="photo09">
+      <div class= "container">
+        <img src= "img/webDesign/margie.png" alt="Margie & the Moon's landing page"/>
+        <a class= "lightbox-close" href= "#">X</a>
+      </div>
+    </div> -->
+  </div>
 
-    <div class="row">
+  <div class="UX | UI column">
+	   <a class= "lightbox" href="#photo03">
+		     <figure class= "photo03"><h4>Instant Pet Finder Application Prototype</h4></figure>
+	    </a>
 
-
-        <div class="Graphic Design column">
-            <div class="content">
-                <img src="img/graphic/oilgif.gif" alt="Oil product animation" style="width:100%">
-                <h4>Halt Oil Fights Acne.</h4>
-                <p>Graphic created for Skin Alchemy.</p>
-            </div>
-        </div>
-        <div class="Graphic Design column">
-            <div class="content">
-                <img src="img/graphic/aperol.png" alt="Aperol Spritz Illustration" style="width:100%">
-                <h4>Aperol Spritz Illustration</h4>
-                <p>Summer in a wine glass.</p>
-            </div>
-        </div>
-        <div class="Graphic Design column">
-            <div class="content">
-                <img src="img/graphic/bodyButter.png" alt="Body Butter product Illustration" style="width:100%">
-                <h4>Body Butter Product</h4>
-                <p>Graphic created for Skin Alchemy.</p>
-            </div>
-        </div>
-        <div class="Graphic Design column">
-            <div class="content">
-                <img src="img/graphic/coffeeAdic.gif" alt="Coffee Addict Gif Animation" style="width:100%">
-                <h4>But First Coffee!</h4>
-                <p>Created for the Honduran Coffee Company.</p>
-            </div>
-        </div>
-
-        <div class="Graphic Design column">
-            <div class="content">
-                <img src="img/graphic/alright.png" alt="Everything is going to be alright hand lettering" style="width:100%">
-                <h4>Handlettering Illustration</h4>
-                <p>Graphic created for social media during Covid-19.</p>
-            </div>
-        </div>
-        
-
-
-        <div class="Web Development column">
-            <div class="content">
-                <img src="img/webDesign/jamming.PNG" alt="Jamming web application landing page" style="width:100%">
-                <h4>Jamming Web Application.</h4>
-                <p>This a React Web App. It allows users to search their Spotify library, create a custom playlist, then save it to their Spotify account. It was build using React and the Spotify API.</p>
-            </div>
-        </div>
-
-
-        <div class="Web Development column">
-            <div class="content">
-                <img src="img/webDesign/M&theM.png" alt="Margie & the Moon's landing page" style="width:100%">
-                <h4>Margie and the Moon's Web page.</h4>
-                <p>Margie & the Moon is an illustration, pattern design studio in New Orleans. My client's issue with her prior website was that it did not reflect her personality. She is a vibrant artist who loves colors. I used Margie's art as the star and balanced that with with space and warm tones.</p>
-            </div>
-        </div>
-
-        <div class="Web Development column">
-            <div class="content">
-                <img src="img/webDesign/Aurore.PNG" alt="Aurore Lilly Landing page" style="width:100%">
-                <h4>Aurore Lilly Portfolio</h4>
-                <p>I have created my portfolio with standard HTML, CSS, Javascript, Flexbox & Bootstrap. I wanted a responsive portfolio, which is fun for users' to navigate and colorful. I really wanted this page to stand out and be original so most of the content here is made by me. </p>
-            </div>
+	     <!-- <div class= "lightbox-target" id="photo03">
+		       <div class= "container">
+			       <img src= "img/ux/instantpet/Instantpet-browser.png" alt="Pet Adoption Application prototype"/>
+			          <a class= "lightbox-close" href= "#">X</a>
+		       </div>
+	        </div> -->
         </div>
 
 
 
 
         <div class="UX | UI column">
-            <div class="content">
-                <img src="img/ux/weatherapp/Weather-daily.png" alt="Weather Application prototype" style="width:100%">
-                <h4>Weather Application Prototype</h4>
-                <p>Treehouse Techdegree<br>My client approached me to design and prototype their new weather app. The app needed an overview screen of the current day and upcoming days, the second screen to cover more details about the present day.<br>
-                Role: UX/ UI Designer
+          <a class= "lightbox" href="#photo04">
+ 		         <figure class= "photo04"><h4>Hike With Me Application Prototype</h4></figure>
+ 	         </a>
 
-                </p>
-            </div>
-        </div>
-
-        <div class="UX | UI column">
-            <div class="content">
-                <img src="img/ux/hikewithme/Hike-login.png" alt="Hiking Application prototype" style="width:100%">
-                <h4>Hike With Me Application Prototype</h4>
-                <p>Treehouse Techdegree<br>My Client, Hike With Me, asked me to create a new user flow for their hiking app. The goal of the app is to create healthier communities and gain more active users by giving people an easy way to schedule a hike.<br>
-                Role: UX/ UI Designer
-                </p>
-            </div>
-        </div>
-
-        <div class="UX | UI column">
-            <div class="content">
-                <img src="img/ux/instantpet/Instantpet-browser.png" alt="Pet Adoption Application prototype" style="width:100%">
-                <h4>Instant Pet Finder Application Prototype</h4>
-                <p>Treehouse Techdegree<br>My client, Instant Pet Finder, has created a new pet adoption site. The website will allow users to contact local shelters about adoptable pets, as well as search for pets in their area. I was asked to create a design for sign up form for the new site.<br>
-                Role: UX/ UI Designer
-                </p>
-            </div>
-        </div>
-
-    </div>
-</div> <!-- div class main -->
-
-
-    <script>
-
-    filterSelection("all") // Execute the function and show all columns
-function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("column");
-  if (c == "all") c = "";
-  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-  }
-}
-// Show filtered elements
-function w3AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {
-      element.className += " " + arr2[i];
-    }
-  }
-}
-
-// Hide elements that are not selected
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);
-    }
-  }
-  element.className = arr1.join(" ");
-}
-
-// Add active class to the current button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
-
-
-    </script>
+ 	         <!-- <div class= "lightbox-target" id="photo04">
+ 		          <div class= "container">
+ 			            <img src= "img/ux/hikewithme/Hike-login.png" alt="Hiking Application prototype"/>
+ 			              <a class= "lightbox-close" href= "#">X</a>
+ 		               </div>
+ 	               </div> -->
+               </div>
 
 
 
+               <div class="Graphic Design column">
+   	             <a class= "lightbox" href= "#photo02">
+   		              <figure class= "photo02"><h4>Handlettering Illustration</h4></figure>
+   	              </a>
+
+   	              <!-- <div class= "lightbox-target" id="photo02">
+   		               <div class= "container">
+   			                 <img src= "img/graphic/alright.png" alt="Everything is going to be alright hand lettering"/>
+   			                   <a class= "lightbox-close" href= "#">X</a>
+   	                 </div>
+   	               </div> -->
+                 </div>
+
+
+                 <div class="Graphic Design column">
+                   <a class= "lightbox" href="#photo06">
+                      <figure class= "photo06"><h4>Coffee gif created for The Honduran Coffee</h4></figure>
+                    </a>
+
+                    <!-- <div class= "lightbox-target" id="photo06">
+                       <div class= "container">
+                           <img src="img/graphic/coffee-gif.gif" alt="Coffee Addict gif"/>
+                             <a class= "lightbox-close" href= "#">X</a>
+                       </div>
+                     </div> -->
+                   </div>
+
+
+
+                    <div class="Graphic Design column">
+                      <a class= "lightbox" href= "#photo01" >
+                        <figure class= "photo01"><h4>Aperol Spritz Illustration</h4></figure>
+                      </a>
+
+                      <!-- <div class= "lightbox-target" id="photo01">
+
+                        <div class= "container" alt="Body Butter product Illustration"/>
+                        <img src= "img/graphic/aperol.png">
+                        <a class= "lightbox-close" href= "#">X</a>
+                      </div>
+                    </div> -->
+                  </div>
+
+
+                  <div class="Graphic Design column">
+                    <a class= "lightbox" href="#photo05">
+                        <figure class= "photo05"><h4>Skin Alchemy Body Butter Product</h4></figure>
+                      </a>
+
+                      <!-- <div class= "lightbox-target" id="photo05">
+                         <div class= "container">
+                             <img src= "img/graphic/bodyButter.png" alt="Skin Alchemy body butter product illustration"/>
+                               <a class= "lightbox-close" href= "#">X</a>
+                          </div>
+                        </div> -->
+                     </div>
+
+
+                      <div class="Web Development column">
+                        <a class= "lightbox" href="#photo07">
+                          <figure class= "photo07"><h4>Jamming Web Application</h4></figure>
+                        </a>
+
+                        <!-- <div class= "lightbox-target" id="photo07">
+                          <div class= "container">
+                            <img src= "img/webDesign/jamming.PNG" alt="Jamming Web Application landing page"/>
+                            <a class= "lightbox-close" href= "#">X</a>
+                          </div>
+                        </div> -->
+                      </div>
+
+
+                      <div class="Web Development column">
+                        <a class= "lightbox" href="#photo08">
+                          <figure class= "photo08"><h4>Aurore Lilly's portfolio</h4></figure>
+                        </a>
+
+                        <!-- <div class= "lightbox-target" id="photo08">
+                          <div class= "container">
+                            <img src= "img/webDesign/Aurore.PNG" alt="Aurore's portfolio landing page"/>
+                            <a class= "lightbox-close" href= "#">X</a>
+                          </div>
+                        </div> -->
+                      </div>
+
+
+                      <div class="UX | UI column">
+                        <a class= "lightbox" href="#photo10">
+                          <figure class= "photo10"><h4>Slider component</h4></figure>
+                        </a>
+
+                        <!-- <div class= "lightbox-target" id="photo10">
+                          <div class= "container">
+                            <img src= "img/ux/slider.png" alt="Slider component"/>
+                            <a class= "lightbox-close" href= "#">X</a>
+                          </div>
+                        </div> -->
+                      </div>
+
+
+                      <div class="UX | UI column">
+                        <a class= "lightbox" href="#photo14">
+               		         <figure class= "photo14"><h4>Weather Application Prototype</h4></figure>
+               	         </a>
+
+               	         <!-- <div class= "lightbox-target" id="photo04">
+               		          <div class= "container">
+               			            <img src= "img/ux/hikewithme/Hike-login.png" alt="Hiking Application prototype"/>
+               			              <a class= "lightbox-close" href= "#">X</a>
+               		               </div>
+               	               </div> -->
+                             </div>
+
+
+                      <div class="UX | UI column">
+                        <a class= "lightbox" href="#photo11">
+                          <figure class= "photo11"><h4>Info Card Component</h4></figure>
+                        </a>
+
+                        <!-- <div class= "lightbox-target" id="photo11">
+                          <div class= "container">
+                            <img src= "img/ux/info-card.png" alt="Slider component"/>
+                            <a class= "lightbox-close" href= "#">X</a>
+                          </div>
+                        </div> -->
+                      </div>
+
+                      <div class="UX | UI column">
+                        <a class= "lightbox" href="#photo12">
+                          <figure class= "photo12"><h4>Post-it Component</h4></figure>
+                        </a>
+
+                        <!-- <div class= "lightbox-target" id="photo12">
+                          <div class= "container">
+                            <img src= "img/ux/post-it.png" alt="Slider component"/>
+                            <a class= "lightbox-close" href= "#">X</a>
+                          </div>
+                        </div> -->
+                      </div>
+
+                      <div class="Web Development column">
+                        <a class= "lightbox" href="#photo13">
+                          <figure class= "photo13"><h4>Monte Vista Website</h4></figure>
+                        </a>
+
+                        <!-- <div class= "lightbox-target" id="photo13">
+                          <div class= "container">
+                            <img src= "img/webDesign/honduran.png" alt="Slider component"/>
+                            <a class= "lightbox-close" href= "#">X</a>
+                          </div>
+                        </div> -->
+                      </div>
+
+
+
+
+                      <div class="Graphic Design column">
+                        <a class= "lightbox" href="#photo06">
+                           <figure class= "photo15"><h4>Halt Oil gif created for Skin Alchemy</h4></figure>
+                         </a>
+
+                         <!-- <div class= "lightbox-target" id="photo06">
+                            <div class= "container">
+                                <img src="img/graphic/coffee-gif.gif" alt="Coffee Addict gif"/>
+                                  <a class= "lightbox-close" href= "#">X</a>
+                            </div>
+                          </div> -->
+                        </div>
+
+                    </div>
+                  </div><!-- end of main -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="js/work.js"></script>
+  <script src="js/main.js"></script>
+
+  </body>
 </html>

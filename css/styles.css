@@ -1,5 +1,6 @@
 /* Import Roboto and Roboto-slab from Google Fonts - Short URL (http://srt.lt/b4tY7) */
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:700|Roboto:300');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
 
 /* Import Font Awesome - Short URL (http://srt.lt/p2b4) */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
@@ -63,7 +64,7 @@ h1 {
     background-size: contain;
     background-repeat: no-repeat;
 		background-position: center center; /* Position the image in the middle */
-		margin: 20px;
+		margin: 8px;
 	}
 
 	@media only screen and (max-width: 450px){
@@ -108,14 +109,24 @@ h1 {
 	/* The flex properties of the card header, footer and body allows the footer to always be at the bottom of the container */
 
 	.card__title {
+		font-size: 28px;
+		text-align: center;
 		margin-top: 0;
-		font-size: 50px;
+
 	}
 
-	@media only screen and (max-width:770px){
+	@media only screen and (min-width:768px){
 		.card__title {
 			font-size: 38px;
-			text-align: center;
+			padding: 0 122px;
+		}
+	}
+
+	@media only screen and (min-width:1000px){
+		.card__title {
+			font-size: 54px;
+			text-align: left;
+			padding: 0;
 		}
 	}
 
@@ -125,14 +136,13 @@ h1 {
         font-size: 18px;
     }
 
-
 	.card {
 		flex-direction: row; /* Align items along the horizontal axis */
 		min-height: 50vh;
 	}
 
 		.card__image-container {
-			flex: 0 1 45%; /* Don't grow, do shrink, 45% width (basis) */
+			flex: 0 1 40%; /* Don't grow, do shrink, 45% width (basis) */
 			max-height: inherit; /* Reset the max-height set for mobile */
 		}
 
@@ -140,7 +150,6 @@ h1 {
 			flex: 1 1 55%; /* Grow, Shrink, 55% width */
 			padding: 2rem; /* Increase padding now we have more space to play with */
 		}
-
 }
 
 
@@ -168,7 +177,7 @@ h1 {
     margin-right: 0.1rem;
 }
 
-@media only screen and (max-width: 414px){
+@media only screen and (max-width: 770px){
 	[class^="social-button"] {
 		height: 2rem;
 		width: 2rem;
@@ -321,17 +330,31 @@ h1 {
 	justify-content: center; /* Align horizontally */
 	align-items: center; /* Align vertically */
 
-	width: 3rem; /* Button width */
-	height: 3rem; /* Button height */
+	width: 2rem; /* Button width */
+	height: 2rem; /* Button height */
 	border-radius: 50%; /* Make the button a circle */
-	background-color: rgba(255,255,255,0.6); /* Make the background white and semi-transparent */
+ white and semi-transparent */
 	cursor: pointer;
   text-decoration: none;
 	transition: background-color 500ms ease-in-out; /* Add transition for the background-color */
 }
 
+@media only screen and (min-width: 1024px){
+	.menu-button {
+		width: 3rem; /* Button width */
+		height: 3rem; /* Button height */
+	}
+}
+
 .card__image-container .menu-button {
-	margin: 1.5rem;
+	margin: .5rem .6rem;
+}
+
+@media only screen and (min-width: 1024px){
+	.card__image-container .menu-button {
+		margin: 1.8rem 1rem;
+	}
+
 }
 
 .menu-button:hover,
@@ -342,8 +365,8 @@ h1 {
 
 .menu-icon {
 	position: relative; /* Give the menu-icon position relative so we can absolutely position children */
-  width: 1.8rem; /* Icon width */
-	height: 1.5rem; /* Icon height */
+  width: 1.6rem; /* Icon width */
+	height: 1.3rem; /* Icon height */
 }
 
 .menu-icon span {
@@ -441,9 +464,22 @@ h1 {
 		margin: 0 auto; /* Position in the horizontal center and remove top and bottom margins */
 	}
 	a.title_nav {
+		text-align: center;
 		text-decoration: none;
 		color: rgb(41,39,40);
-		font-size: 46px;
+		font-size: 34px;
+	}
+
+	@media only screen and (min-width: 768px){
+		a.title_nav {
+			font-size: 40px;
+		}
+	}
+
+	@media only screen and (min-width: 1024px){
+		a.title_nav {
+			font-size: 46px;
+		}
 	}
 
 	.fullscreen-menu__nav {

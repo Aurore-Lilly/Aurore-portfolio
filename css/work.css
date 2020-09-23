@@ -1,194 +1,501 @@
-
-*,
-*::before,
-*::after {
-	box-sizing: border-box; /* Put padding on the inside of elements */
-}
-
-header{
-    position: fixed;
-    top: 0;
-    padding-bottom: 20px;
-}
-ul {
-    padding: 10px;
-    width: 100%;
-    list-style-type: none;
-}
-li a {
-    display: block;
-    text-decoration: none;
-    
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+/* Import Font Awesome - Short URL (http://srt.lt/p2b4) */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 
 
+  * {
+  box-sizing: border-box;
+  color:#000;
+  font-family: 'Libre Baskerville', serif;
+  }
 
-[class^="icon--"] {
-    font-family: 'FontAwesome'; /* Apply icon font */
-    font-style: normal; /* Removes the default italics */
-}
+  aside {
+  	padding:20px 20px 20px 30px;;
+  	background-color: rgba(249,247,241,0.8);
+		background:url("../img/background.png") no-repeat;
+		background-size: cover;
+    background-position: center;
+  }
 
-[class^="social-button"] {
-   	display: inline-flex; /* Display elements inline but turn them into a flex-container */
-	align-items: center; /* Centrally align the children vertically */
-	justify-content: center; /* Centrally align the children horizontally */
-
-   	height: 3.4rem; /* Create square */
-    width: 3.4rem; /* Create square */
-
-   	font-size: 1.4rem; /* Increase the default font size */
-    color: white; /* Make icon white */
-    
-    text-decoration: none; /* Remove default underline */
-
-    transition: background-color 150ms ease-in-out; /* Transition background colour on hover */
-
-    margin-right: 0.1rem;
-    margin-top: 3rem;
-}
-
-.icon--arrow::before {
-    content: '\f060';
-    color: #494D96;
-    text-decoration: none;
-}
-.social-button--arrow {
-    background-color: #ffffff; /* Facebook colour */
-}
-.social-button--arrow:hover {
-    background-color: rgba(255,6,168,.8); /* Pintrest hover colour */
-    text-decoration: none;
-}
-
-button.icon--arrow {
-    text-decoration-color: none;
-    background: none;
-    border: none;
-}
-div#myBtnContainer{
-    display: inline-block;
-}
-
-body {
-	font-family: 'Roboto', sans-serif;
-	font-size: 16px; /* Our base font-size */
-	line-height: 1.75; /* Line height assumes an almost rem value but is dynamic to the font-size */
-	font-weight: 300; /* Use the included weight */
-	color: #332F21; /* Don't use black it's too harsh */
-
-	display: flex; /* Set body to be a flex container */
-	align-items: center; /* Vertically centre content in the viewport */
-	justify-content: center; /* Horizontally centre content in the viewport */
-
-	min-height: 100vh; /* Force vertical centering since the content won't always be taller than the viewport */
-	padding: 2rem; /* Using rem values as they don't cascade like em units and are not fixed units like pixels */
-
-	background-image: linear-gradient(rgba(73,77,150,8), rgba(255,6,168,.6)); /* Multiple Background images, semi-transparent gradient used as a fallback for Edge */
-    background-repeat: round;
-}
-
-@supports(background-blend-mode: multiply) { /* Use a blend mode on the background in browser that support it */
-
-	body {
-		background-image: linear-gradient(rgba(73,77,150,.8), rgba(73,77,150,.8)); /* Multiple background images, Gradient overlay and the Image */
-		background-blend-mode: multiply; /* Blending the Gradient with the Background Image (can't use black to blend) */
+  a.title_nav {
+    font-family: 'Inknut Antiqua', serif;
+		text-align: center;
+		text-decoration: none;
+		color: rgb(41,39,40);
+		font-size: 34px;
 	}
+
+	@media only screen and (min-width: 768px){
+		a.title_nav {
+			font-size: 40px;
+		}
+	}
+
+	@media only screen and (min-width: 1024px){
+		a.title_nav {
+			font-size: 46px;
+		}
+	}
+
+  .fullscreen-menu__image-container {
+    width: 10rem;
+    height: 10rem;
+    background-image: url(../img/Aurore.png);
+    background-size: cover;
+    background-position: center center;
+    margin: 0 auto 1.5rem;
 }
 
 
-h4 {
-	font-family: 'IBM Plex Serif', serif;;
-    font-weight: 300;
-	font-size: 1.8rem; /* 36px based on 16px base font size */
-	line-height: 1.3333; /* Based on 36px font size and a 48px line-height */
-    padding-top: 10px;
+  	.menu-button {
+  		display: flex; /* Display flex to center the menu icon in the button */
+  		justify-content: center; /* Align horizontally */
+  		align-items: center; /* Align vertically */
+
+  		width: 3rem; /* Button width */
+  		height: 3rem; /* Button height */
+  		border-radius: 50%; /* Make the button a circle */
+  		cursor: pointer;
+  	  text-decoration: none;
+  		transition: background-color 500ms ease-in-out; /* Add transition for the background-color */
+  	}
+
+  	.menu-button:hover,
+  	.menu-button:focus,
+  	.menu-button:active {
+  	    background-color: rgba(255,6,168,0.6); /* On hover, transition the background-color and transparency */
+  	}
+
+  	.menu-icon {
+  		position: relative; /* Give the menu-icon position relative so we can absolutely position children */
+  	  width: 1.8rem; /* Icon width */
+  		height: 1.5rem; /* Icon height */
+      margin: 5px;
+  	}
+
+  	.menu-icon span {
+  	    position: absolute; /* Absolutely position all children of the menu-icon */
+  	    height: 0.125rem; /* Height of each line in our menu button */
+  	    width: 100%; /* With of each line */
+  	    background-color: #332F21; /* Background colour of each line */
+  	    transition: background-color 500ms ease-in-out; /* Transition added for the background colour */
+  	}
+
+  	.menu-icon span:nth-child(1) {
+  	    top: 0.0625rem; /* Position the first line roughly 1px from the top */
+  	}
+
+  	.menu-icon span:nth-child(2) {
+  	    top: 0.625rem; /* Position the second line roughly 10px from the top, one on top of the other */
+  	}
+
+  	.menu-icon span:nth-child(3) {
+  	    top: 1.25rem; /* Position the fourth line roughly 20px from the top */
+  	}
+
+  	.menu-button:hover span,
+  	.menu-button:focus span,
+  	.menu-button:active span {
+  	    background: white; /* On hover, make the background-color of the menu icon white */
+  	}
+
+  	/* Turn the Menu icon into a close icon  */
+
+  	.menu-icon.is-active span:nth-child(1) {
+  	    opacity: 0; /* Hide the first line */
+  	}
+
+  	.menu-icon.is-active span:nth-child(2) {
+  	    transform: rotate(45deg); /* Rotate the second line 45 degrees */
+  	}
+
+  	.menu-icon.is-active span:nth-child(3) {
+  		top: 0.625rem; /* Position the third line over the second line */
+  	    transform: rotate(-45deg); /* Rotate the third line -45 degrees */
+  	}
+
+  	/* Fullscreen Menu */
+
+  	.fullscreen-menu-container {
+  		position: fixed; /* Fix the menu to the viewport */
+  		top: 12.5rem; /* Add the top value to allow the element to animate up over */
+  		left: 0; /* Position to the left of the viewport */
+  		z-index: 5; /* Add z-index to make sure the element is always above everything else */
+  		width: 100vw; /* Cover the whole width of the viewport */
+  		height: 100vh; /* Cover the whole height of the viewport */
+  		overflow: scroll; /* Allow scrolling when the content is larger than the viewport */
+
+  		background-color: rgba(255,255,255,0.95); /* Semi-transparent white background for the menu-overlay */
+
+  		opacity: 0; /* Apply 0 transparency to hide the overlay on load */
+  		pointer-events: none; /* Stop the elements in the menu-container from being clicked */
+
+  		transition: top 500ms ease-in, opacity 300ms ease-in; /* Transition the top and opacity */
+  	}
+
+  	.fullscreen-menu-container.is-open {
+  		opacity: 1; /* Transition opacity from 0 to 1 */
+  		top: 0; /* Transition to the top of the viewport */
+  		pointer-events: auto; /* Re-add pointer events to elements can be clicked again */
+  		background-color: #fff;
+  	}
+
+  	.fullscreen-menu-container .menu-button {
+  		position: absolute; /* Position the button absolutely to the image-cotainer */
+  		top: 1.5rem; /* Position button from the top */
+  		right: 1.5rem; /* Position button from the left */
+  	}
+
+  	.fullscreen-menu {
+  		text-align: center; /* Apply text-align center to all children */
+  		max-width: 62rem; /* Maximum width of the content */
+  		padding: 6rem 2rem 4rem; /* Add padding to the content, large at the top to allow for the close button */
+  		width: 100%; /* Where it can, stretch to the max-width otherwise, the full viewport */
+  	}
+
+
+  		.fullscreen-menu__title {
+  			max-width: 30rem; /* Apply a different max-width to the title to achieve a more optimal reading lenght */
+  			margin: 0 auto; /* Position in the horizontal center and remove top and bottom margins */
+  		}
+
+  		.fullscreen-menu__nav {
+  			margin: 3rem 0; /* Apply top and bottom margin of the navigation */
+  		}
+
+  		.fullscreen-menu__nav ul {
+  			list-style: none; /* Remove the dots from list items */
+  			margin: 0; /* Remove defualt margin */
+  			padding: 0; /* Remove default padding */
+  		}
+
+  		.fullscreen-menu__nav a {
+  			display: block; /* Span the whole width */
+  			font-size: 1.2rem; /* Increase the default font size */
+  			padding: 1rem; /* Add padding to the button to increase the click/tap area */
+  			color: rgb(41,39,40); /* Apply light grey colour */
+  			text-decoration: none; /* Remove default underline */
+  			transition: color 300ms ease-in; /* Add transition for the colour on hover */
+  		}
+
+  	    .fullscreen-menu__nav a:hover{
+  	        background-color: rgba(255,6,168,3);
+  	        color: #ffffff;
+  					text-decoration: overline;
+  	    }
+
+
+  		.fullscreen-menu__nav a:focus,
+  		.fullscreen-menu__nav a:active {
+  			background-color: rgba(255,6,168,3);
+  	        color: #ffffff;
+  		}
+
+  	.fullscreen-menu [class^="social-button"] {
+  		margin: 0 0.5rem; /* Add a larger margin between the social buttons in the menu overlay */
+  		height: 3.75rem; /* Increase the size of the social buttons */
+  	  width: 3.75rem; /* Increase the size of the social buttons */
+  	  font-size: 1.5rem; /* Increase the size of the social icon inside the button */
+  	}
+
+  	@media only screen and (min-width: 46rem) { /* When the viewport is large enough */
+
+  		.fullscreen-menu-container {
+  			display: flex; /* Add display flex to the container */
+  			justify-content: center; /* Align menu contents to the center horizontally */
+  			align-items: center; /* Align menu contents to the center vertically */
+  		}
+
+  		.fullscreen-menu {
+  			padding: 0;
+  		}
+
+  		.fullscreen-menu__nav {
+  			margin: 4rem 0; /* Increase the margin between the navigation and other elements in the menu */
+  		}
+
+  	    .fullscreen-menu__nav ul {
+  	        display: flex; /* Turn the unordered list into a flex-container */
+  	        justify-content: space-between; /* Share the available space between the list items */
+  			}
+
+  	}
+
+.btn-container {
+	text-align: center;
+	padding-top: 4vw;
+	padding-bottom: 3vw;
 }
 
-/* Center website */
-.main {
-  max-width: 1000px;
-  
+.btn {
+  border: none;
+  outline: none;
+	margin: 10px;
+	font-size: 12px;
+	font-family: 'Libre Baskerville', serif;
+  cursor: pointer;
 }
 
-h1 {
-  font-size: 50px;
-  word-break: break-all;
+@media only screen and (min-width: 700px) {
+  .btn {
+    font-size: 16px;
+  }
+}
+
+
+.btn1 .item .active {
+  display: inline-block;
+}
+
+.active {
+  background-color: rgb(255,56,185);
+  color: #f2f2f2;
 }
 
 .row {
-  margin: 8px -16px;
+    text-align: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
-/* Add padding BETWEEN each column (if you want) */
-.row,
-.row > .column {
-  padding: 8px;
+.row figure {
+    height: 300px;
+    width: 300px;
+    margin:0;
+    background-size: cover;
+	  background-position: 50% 50%;
+    box-shadow:0 0 15px rgba(0, 0, 0, 0.7);
+    transition: all 1s ease-in-out;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: inline-block;
+    position: relative;
 }
+
+@media only screen and (min-width: 700px) {
+  .row figure {
+    height: 320px;
+    width: 320px;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .row figure {
+    height: 400px;
+    width: 400px;
+  }
+}
+
+.row a {
+    display: inline-block;
+    text-align: center;
+    margin: 14px;
+    text-decoration:none;
+    color:white;
+}
+
+.row a h4 {
+    position:absolute;
+    opacity: 0;
+    top:45%;
+    z-index:100;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+figure:hover h4 {
+    opacity:1;
+    color: #f2f2f2;
+    font-family: 'IBM Plex Serif', serif;
+    font-weight: 300;
+  	font-size: 18px;
+    line-height: 1.8;
+    margin: 0 20px;
+}
+
+@media only screen and (min-width: 768px){
+  figure:hover h4 {
+    font-size: 24px;
+    margin: 0 40px;
+  }
+}
+
+@media only screen and (min-width: 1024px){
+  figure:hover h4 {
+    font-size: 28px;
+    margin: 0 60px;
+  }
+}
+
+figure:after {
+    content:"";
+    display:inline-block;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255,56,185, 1);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    opacity:0;
+    transition: all 0.4s ease-in-out 0s;
+    z-index:99;
+}
+
+figure:hover:after {
+    opacity:.8;
+}
+
+.photo01 {
+	background-image: url("../img/graphic/aperol.png");
+}
+
+.photo02 {
+	background-image: url("../img/graphic/alright.png");
+}
+
+.photo03 {
+	background-image: url("../img/ux/instantpet/Instantpet-browser.png");
+}
+
+.photo04 {
+	background-image: url("../img/ux/hikewithme/Hike-login.png");
+}
+
+.photo05 {
+	background-image: url("../img/graphic/bodyButter.png");
+}
+
+.photo06 {
+	background-image: url("../img/graphic/coffee-gif.gif");
+}
+
+.photo07 {
+	background-image: url("../img/webDesign/jamming.PNG");
+}
+
+.photo08 {
+	background-image: url("../img/webDesign/Aurore.PNG");
+}
+
+.photo09 {
+	background-image: url("../img/webDesign/margie.png");
+}
+
+.photo10 {
+	background-image: url("../img/ux/slider.png");
+}
+
+.photo11 {
+	background-image: url("../img/ux/info-card.png");
+}
+
+.photo12 {
+	background-image: url("../img/ux/post-it.png");
+}
+
+.photo13 {
+	background-image: url("../img/webDesign/honduran.png");
+}
+
+.photo14 {
+  background-image: url("../img/ux/weatherapp/weather-app.png");
+}
+
+.photo15 {
+  background-image: url("../img/graphic/oilgif.gif");
+}
+
+
+/* lightbox */
+
+/* .lightbox-target {
+  position: fixed;
+  top: -100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  -webkit-transition: opacity .5s ease-in-out;
+  -moz-transition: opacity .5s ease-in-out;
+  -o-transition: opacity .5s ease-in-out;
+  transition: opacity .5s ease-in-out;
+  overflow: hidden;
+  z-index:300;
+}
+
+.lightbox-target .container {
+  margin: auto;
+  position: absolute;
+  width: 500px;
+  top: 50vh;
+  left: 50vw;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  text-align:left;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+
+.container .elements {
+    display:inline-block;
+    width: 100%;
+    max-height: 500px;
+}
+
+
+a.lightbox-close {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: #f2f2f2;
+  color: #5B4B99;
+  text-decoration: none;
+  position: absolute;
+  top: 0px;
+  right: 0;
+  margin: 0;
+  padding-top: 10px;
+}
+
+.lightbox-target:target {
+  opacity: 1;
+  top: 0;
+  bottom: 0;
+}
+
+.lightbox-target:target img {
+    height: 500px;
+    vertical-align: top;
+} */
 
 /* Create three equal columns that floats next to each other */
 .column {
   float: left;
-  width: 33.33%;
+  width: 100%;
   display: none; /* Hide columns by default */
 }
 
-/* Clear floats after rows */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+@media only screen and (min-width: 768px) { /* Base-spacing-unit * 30 */
+
+    .column {
+        width: 50%;
+    }
 }
 
-/* Content */
-.content {
-  background-color: white;
-  padding: 10px;
+@media only screen and (min-width: 1300px) {
+  .column {
+  width: 33.33%;
+  margin-left: auto;
+  margin-right: auto;
+  }
 }
 
 /* The "show" class is added to the filtered elements */
 .show {
   display: block;
-}
-
-/* Style the buttons */
-.btn {
-  border: none;
-  outline: none;
-    margin: 10px;
-  padding: 16px 22px;
-  background-color: white;
-  cursor: pointer;
-}
-
-/* Add a grey background color on mouse-over */
-.btn:hover {
-  background-color: rgba(255,6,168,.8);
-    color: white;
-    text-decoration: underline;
-}
-
-/* Add a dark background color to the active button */
-.btn.active {
-  background-color: rgba(255,6,168,.8);
-   color: white;
-    text-decoration: underline;
-}
-
-
-@media only screen and (max-width: 53rem) { /* Base-spacing-unit * 30 */
-    
-    h1{
-        font-size: 18px;
-    }
-    
-
-	.row {
-        display: flex;
-		flex-direction: column; /* Align items along the horizontal axis */
-		min-height: 60vh;
-	}
-    .column {
-        width: 100%;
-    }
-
 }
