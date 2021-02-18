@@ -1,5 +1,5 @@
-/* Import Roboto and Roboto-slab from Google Fonts - Short URL (http://srt.lt/b4tY7) */
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:700|Roboto:300');
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=PT+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
 
 /* Import Font Awesome - Short URL (http://srt.lt/p2b4) */
@@ -13,7 +13,7 @@
 
 
 body {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'PT Sans', sans-serif;
 	font-size: 16px; /* Our base font-size */
 	line-height: 1.75; /* Line height assumes an almost rem value but is dynamic to the font-size */
 	font-weight: 300; /* Use the included weight */
@@ -28,7 +28,7 @@ body {
 
 	background-position: center center;
 	background-size: cover;
-	background-image: linear-gradient(rgba(223,223,223,.03), rgba(223,223,223,.1)), url('../img/background.png'); /* Multiple background images, Gradient overlay and the Image */
+	background-image: linear-gradient(rgba(223,223,223,.03), rgba(223,223,223,.1)), url('../img/bbb.jpg'); /* Multiple background images, Gradient overlay and the Image */
 	background-blend-mode: multiply; /* Blending the Gradient with the Background Image (can't use black to blend) */
 }
 
@@ -62,6 +62,7 @@ h1 {
 	.card__image-container {
 		background-image: url('../img/Aurore.png');
     background-size: contain;
+		height:100px;
     background-repeat: no-repeat;
 		background-position: center center; /* Position the image in the middle */
 		margin: 8px;
@@ -112,6 +113,7 @@ h1 {
 		font-size: 28px;
 		text-align: center;
 		margin-top: 0;
+		color: #FF38B9;
 
 	}
 
@@ -124,11 +126,15 @@ h1 {
 
 	@media only screen and (min-width:1000px){
 		.card__title {
-			font-size: 54px;
+			font-size: 34px;
 			text-align: left;
 			padding: 0;
 		}
+		.card__image-container {
+			height:auto;
+		}
 	}
+
 
 @media only screen and (min-width: 53rem) { /* Base-spacing-unit * 30 */
 
@@ -147,9 +153,19 @@ h1 {
 		}
 
 		.card__contents {
-			flex: 1 1 55%; /* Grow, Shrink, 55% width */
-			padding: 2rem; /* Increase padding now we have more space to play with */
+			flex: 1 1 60%; /* Grow, Shrink, 55% width */
+			padding: 1.8rem; /* Increase padding now we have more space to play with */
 		}
+}
+
+@media only screen and (min-width:1024px){
+		.card__image-container {
+	background-image: url('../img/Aurore.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center; /* Position the image in the middle */
+	margin: 20px;
+	}
 }
 
 
@@ -352,7 +368,7 @@ h1 {
 
 @media only screen and (min-width: 1024px){
 	.card__image-container .menu-button {
-		margin: 1.8rem 1rem;
+		margin: 0rem 1rem 1.8rem;
 	}
 
 }
@@ -445,7 +461,7 @@ h1 {
 .fullscreen-menu {
 	text-align: center; /* Apply text-align center to all children */
 	max-width: 62rem; /* Maximum width of the content */
-	padding: 6rem 2rem 4rem; /* Add padding to the content, large at the top to allow for the close button */
+	padding: 4rem 2rem 4rem; /* Add padding to the content, large at the top to allow for the close button */
 	width: 100%; /* Where it can, stretch to the max-width otherwise, the full viewport */
 }
 
@@ -466,7 +482,7 @@ h1 {
 	a.title_nav {
 		text-align: center;
 		text-decoration: none;
-		color: rgb(41,39,40);
+		color:#FF38B9;
 		font-size: 34px;
 	}
 
@@ -483,7 +499,7 @@ h1 {
 	}
 
 	.fullscreen-menu__nav {
-		margin: 3rem 0; /* Apply top and bottom margin of the navigation */
+		margin: 1rem 0; /* Apply top and bottom margin of the navigation */
 	}
 
 	.fullscreen-menu__nav ul {
@@ -495,7 +511,7 @@ h1 {
 	.fullscreen-menu__nav a {
 		display: block; /* Span the whole width */
 		font-size: 1.2rem; /* Increase the default font size */
-		padding: 1rem; /* Add padding to the button to increase the click/tap area */
+		padding: .6rem; /* Add padding to the button to increase the click/tap area */
 		color: rgb(41,39,40); /* Apply light grey colour */
 		text-decoration: none; /* Remove default underline */
 		transition: color 300ms ease-in; /* Add transition for the colour on hover */
@@ -532,10 +548,11 @@ h1 {
     margin-bottom: 30px;
     }
     p {
-    font-family: 'IBM Plex Serif', serif;;
+    font-family: 'PT Sans', sans-serif;
     font-weight: 300;
-    font-size: 16px;
-    line-height: 1.9em;
+    font-size: 18px;
+    line-height: 2em;
+		letter-spacing: 1px;
     }
 
 	.fullscreen-menu-container {
@@ -554,6 +571,7 @@ h1 {
 
     .fullscreen-menu__nav ul {
         display: flex; /* Turn the unordered list into a flex-container */
+				padding: 0px 20px;
         justify-content: space-between; /* Share the available space between the list items */
 		}
 
@@ -562,7 +580,7 @@ h1 {
 @media only screen and (max-width: 770px){
 	p{
 		text-align:center;
-		font-size: 12px;
+		font-size: 14px;
 	}
 }
 
