@@ -426,10 +426,10 @@
   padding: 20px;
   margin-top: 16px;
   margin-bottom: 16px;
-  &.is-active {
-    display: block;
   }
-}
+  .sucess.is-active {
+      display: block;
+  }
 
 	@media only screen and (max-width: 580px) {
 		#form-div{

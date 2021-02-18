@@ -289,7 +289,7 @@
   }
 }
 
-.row a {
+.row {
     display: inline-block;
     text-align: center;
     margin: 14px;
@@ -297,10 +297,20 @@
     color:white;
 }
 
-.row a h4 {
+.row a h4  {
     position:absolute;
     opacity: 0;
     top:45%;
+    z-index:100;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.row a.case-study  {
+    position:absolute;
+    opacity: 0;
+    top:65%;
     z-index:100;
     left: 0;
     right: 0;
@@ -317,16 +327,26 @@ figure:hover h4 {
     margin: 0 20px;
 }
 
+figure:hover a.case-study {
+    opacity:1;
+    color: #444A96;
+    font-family: 'IBM Plex Serif', serif;
+    font-weight: 300;
+  	font-size: 18px;
+    line-height: 1.8;
+    margin: 10px 20px;
+}
+
 @media only screen and (min-width: 768px){
   figure:hover h4 {
-    font-size: 24px;
+    font-size: 20px;
     margin: 0 40px;
   }
 }
 
 @media only screen and (min-width: 1024px){
   figure:hover h4 {
-    font-size: 28px;
+    font-size: 22px;
     margin: 0 60px;
   }
 }
@@ -336,12 +356,12 @@ figure:after {
     display:inline-block;
     height: 100%;
     width: 100%;
-    background-color: rgba(255,56,185, 1);
+    background-color: rgba(29,29,29,1);
     position: absolute;
     left: 0;
     bottom: 0;
     opacity:0;
-    transition: all 0.4s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s;
     z-index:99;
 }
 
@@ -366,7 +386,7 @@ figure:hover:after {
 }
 
 .photo05 {
-	background-image: url("../img/graphic/bodyButter.png");
+	background-image: url("../img/webDesign/ravenous1.png");
 }
 
 .photo06 {
@@ -390,7 +410,7 @@ figure:hover:after {
 }
 
 .photo11 {
-	background-image: url("../img/ux/info-card.png");
+	background-image: url("../img/webDesign/sliderpage.png");
 }
 
 .photo12 {
@@ -499,4 +519,5 @@ a.lightbox-close {
 /* The "show" class is added to the filtered elements */
 .show {
   display: block;
+  padding: 20px;
 }

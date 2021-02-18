@@ -1,4 +1,4 @@
-$("#form1").submit(function(e){
+$("#ajaxForm").submit(function(e){
   e.preventDefault();
   var action = $(this).attr("action");
   $.ajax({

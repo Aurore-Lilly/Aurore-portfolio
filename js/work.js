@@ -44,3 +44,31 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
+
+
+var addroute = document.getElementById('add-route');
+var cardroute = document.getElementById('card-route');
+var bgcard = document.getElementById('bgcard');
+var later = document.getElementById('later');
+
+addroute.addEventListener('click',function(){showcard()});
+bgcard.addEventListener('click', function(){hidecard()});
+later.addEventlistener('click', function(){hidecard()});
+
+function showcard(){
+  addroute.classList.remove("iconshow");
+  addroute.classList.add("icondisappear");
+  setTimeout(function(){
+    cardroute.classList.remove("carddisappear");
+    cardroute.classList.add("cardshow");
+  },250)
+}
+
+function hidecard(){
+  cardroute.classList.remove("cardshow");
+  cardroute.classList.add("carddisappear");
+  setTimeout(function(){
+    addroute.classList.remove("icondisappear");
+    addroute.classList.add("iconshow");
+  },250)
+}
