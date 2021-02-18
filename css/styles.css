@@ -511,7 +511,7 @@ h1 {
 	.fullscreen-menu__nav a {
 		display: block; /* Span the whole width */
 		font-size: 1.2rem; /* Increase the default font size */
-		padding: .6rem; /* Add padding to the button to increase the click/tap area */
+		padding: .9rem; /* Add padding to the button to increase the click/tap area */
 		color: rgb(41,39,40); /* Apply light grey colour */
 		text-decoration: none; /* Remove default underline */
 		transition: color 300ms ease-in; /* Add transition for the colour on hover */
