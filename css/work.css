@@ -394,11 +394,11 @@ figure:hover:after {
 }
 
 .photo07 {
-	background-image: url("../img/webDesign/jamming.PNG");
+	background-image: url("../img/webDesign/jammming.png");
 }
 
 .photo08 {
-	background-image: url("../img/webDesign/Aurore.PNG");
+	background-image: url("../img/webDesign/Aurore.png");
 }
 
 .photo16 {
@@ -406,15 +406,13 @@ figure:hover:after {
 }
 
 .photo10 {
-	background-image: url("../img/ux/slider.png");
+	background-image: url("../img/webDesign/cafe-amelie.png");
 }
-
 .photo11 {
 	background-image: url("../img/webDesign/sliderpage.png");
 }
-
 .photo12 {
-	background-image: url("../img/ux/post-it.png");
+	background-image: url("../img/webDesign/dragon.jpg");
 }
 
 .photo13 {
@@ -427,6 +425,10 @@ figure:hover:after {
 
 .photo15 {
   background-image: url("../img/graphic/oilgif.gif");
+}
+
+.photo17 {
+  background-image: url("../img/graphic/bodyButter.jpg");
 }
 
 
@@ -445,7 +447,6 @@ figure:hover:after {
   overflow: hidden;
   z-index:300;
 }
-
 .lightbox-target .container {
   margin: auto;
   position: absolute;
@@ -460,15 +461,11 @@ figure:hover:after {
   text-align:left;
   transform: translate3d(-50%, -50%, 0);
 }
-
-
 .container .elements {
     display:inline-block;
     width: 100%;
     max-height: 500px;
 }
-
-
 a.lightbox-close {
   display: block;
   width: 40px;
@@ -482,13 +479,11 @@ a.lightbox-close {
   margin: 0;
   padding-top: 10px;
 }
-
 .lightbox-target:target {
   opacity: 1;
   top: 0;
   bottom: 0;
 }
-
 .lightbox-target:target img {
     height: 500px;
     vertical-align: top;

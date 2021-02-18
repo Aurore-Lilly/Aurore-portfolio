@@ -17,7 +17,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
-    <link rel="stylesheet" href="css/work1.css" type="text/css">
+    <link rel="stylesheet" href="css/work.css" type="text/css">
 
     </head>
 
@@ -93,61 +93,260 @@
       </article>
 
 
+<body>
 
-      <body>
-          <div class="container">
-              <div class="card">
-                  <div class="face face1">
-                      <div class="content">
-                          <div class="icon">
-                              <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="face face2">
-                      <div class="content">
-                          <h3>
-                              <a href="https://www.linkedin.com/in/adamdipinto/" target="_blank">_adamdipinto</a>
-                          </h3>
-                          <p>This is where I network and build my professional protfolio.</p>
-                      </div>
-                  </div>
-              </div>
-              <div class="card">
-                  <div class="face face1">
-                      <div class="content">
-                          <div class="icon">
-                              <i class="fa fa-twitter-square" aria-hidden="true"></i>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="face face2">
-                      <div class="content">
-                          <h3>
-                              <a href="https://twitter.com/AdamDipinto" target="_blank">@AdamDipinto</a>
-                          </h3>
-                          <p>This is where I read news and network with different social groups.</p>
-                      </div>
-                  </div>
-              </div>
-              <div class="card">
-                  <div class="face face1">
-                      <div class="content">
-                          <div class="icon">
-                              <i class="fa fa-github-square" aria-hidden="true"></i>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="face face2">
-                      <div class="content">
-                          <h3>
-                              <a href="https://github.com/atom888" target="_blank">atom888</a>
-                          </h3>
-                          <p>This is where I share code and work on projects.</p>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </body>
 
-      </html>
+
+
+
+
+
+
+
+
+
+    <div class="main">
+      <div id="myBtnContainer" class="btn-container">
+
+          <button class="btn active item" onclick="filterSelection('all')"> All</button>
+
+          <button class="btn item" onclick="filterSelection('Web Development')"> Web Development</button>
+
+          <button class="btn item" onclick="filterSelection('Graphic Design')"> Graphic Design</button>
+
+          <button class="btn item" onclick="filterSelection('UX | UI' )"> UX | UI</button>
+      </div>
+
+
+
+
+    <!-- GALLERY GRID -->
+
+
+<div class= "row">
+
+  <div class="UX | UI column">
+	   <a class= "lightbox" href="#photo03">
+		     <figure class="photo03 button-menu"><h4>Instant Pet Finder Application Prototype</h4></figure>
+	    </a>
+  </div>
+
+  <div class="container-caption fullmenu-caption">
+    <a class="button js-menu-close">
+    <div class="is-active">
+    </div>
+  </a>
+
+
+  </div>
+
+
+
+
+        <div class="Web Development column">
+          <a class= "lightbox" href="#photo16">
+            <figure class= "photo16"><h4>Margie & the Moon's Website</h4></figure>
+          </a>
+        </div>
+
+
+
+        <div class="UX | UI column">
+          <a class= "lightbox" href="#photo04">
+ 		         <figure class= "photo04"><h4>Hike With Me Application Prototype</h4><p><a class="case-study" href="#">Read case study</a></p></figure>
+ 	         </a>
+
+ 	         <!-- <div class= "lightbox-target" id="photo04">
+ 		          <div class= "container">
+ 			            <img src= "img/ux/hikewithme/Hike-login.png" alt="Hiking Application prototype"/>
+ 			              <a class= "lightbox-close" href= "#">X</a>
+ 		               </div>
+ 	               </div> -->
+               </div>
+
+
+
+               <div class="Graphic Design column">
+   	             <a class= "lightbox" href= "#photo02">
+   		              <figure class= "photo02"><h4>Handlettering Illustration</h4></figure>
+   	              </a>
+
+   	              <!-- <div class= "lightbox-target" id="photo02">
+   		               <div class= "container">
+   			                 <img src= "img/graphic/alright.png" alt="Everything is going to be alright hand lettering"/>
+   			                   <a class= "lightbox-close" href= "#">X</a>
+   	                 </div>
+   	               </div> -->
+                 </div>
+
+
+                 <div class="Graphic Design column">
+                   <a class= "lightbox" href="#photo06">
+                      <figure class= "photo06"><h4>Coffee gif created for The Honduran Coffee</h4></figure>
+                    </a>
+
+                    <!-- <div class= "lightbox-target" id="photo06">
+                       <div class= "container">
+                           <img src="img/graphic/coffee-gif.gif" alt="Coffee Addict gif"/>
+                             <a class= "lightbox-close" href= "#">X</a>
+                       </div>
+                     </div> -->
+                   </div>
+
+
+
+                    <div class="Graphic Design column">
+                      <a class= "lightbox" href= "#photo01" >
+                        <figure class= "photo01"><h4>Aperol Spritz Illustration</h4></figure>
+                      </a>
+
+                      <!-- <div class= "lightbox-target" id="photo01">
+                        <div class= "container" alt="Body Butter product Illustration"/>
+                        <img src= "img/graphic/aperol.png">
+                        <a class= "lightbox-close" href= "#">X</a>
+                      </div>
+                    </div> -->
+                  </div>
+
+
+                  <div class="Graphic Design column">
+                    <a class= "lightbox" href="#photo05">
+                        <figure class= "photo05"><h4>Ravenous Yelp like App</h4></figure>
+                      </a>
+
+                      <!-- <div class= "lightbox-target" id="photo05">
+                         <div class= "container">
+                             <img src= "img/graphic/bodyButter.png" alt="Skin Alchemy body butter product illustration"/>
+                               <a class= "lightbox-close" href= "#">X</a>
+                          </div>
+                        </div> -->
+                     </div>
+
+
+                      <div class="Web Development column">
+                        <a class= "lightbox" href="#photo07">
+                          <figure class= "photo07"><h4>Jamming Web Application</h4><p><a class="case-study" href="#">Read case study</a></p></figure>
+                        </a>
+
+                        <!-- <div class= "lightbox-target" id="photo07">
+                          <div class= "container">
+                            <img src= "img/webDesign/jamming.PNG" alt="Jamming Web Application landing page"/>
+                            <a class= "lightbox-close" href= "#">X</a>
+                          </div>
+                        </div> -->
+                      </div>
+
+
+                      <div class="Web Development column">
+                        <a class= "lightbox" href="#photo08">
+                          <figure class= "photo08"><h4>Aurore Lilly's portfolio</h4><p><a class="case-study" href="#">Read case study</a></p></figure>
+                        </a>
+
+                        <!-- <div class= "lightbox-target" id="photo08">
+                          <div class= "container">
+                            <img src= "img/webDesign/Aurore.PNG" alt="Aurore's portfolio landing page"/>
+                            <a class= "lightbox-close" href= "#">X</a>
+                          </div>
+                        </div> -->
+                      </div>
+
+
+                      <div class="UX | UI column">
+                        <a class= "lightbox" href="#photo10">
+                          <figure class= "photo10"><h4>Slider component</h4></figure>
+                        </a>
+
+                        <!-- <div class= "lightbox-target" id="photo10">
+                          <div class= "container">
+                            <img src= "img/ux/slider.png" alt="Slider component"/>
+                            <a class= "lightbox-close" href= "#">X</a>
+                          </div>
+                        </div> -->
+                      </div>
+
+
+                      <div class="UX | UI column">
+                        <a class= "lightbox" href="#photo14">
+               		         <figure class= "photo14"><h4>Weather Application Prototype</h4><p><a class="case-study" href="#">Read case study</a></p></figure>
+               	         </a>
+
+               	         <!-- <div class= "lightbox-target" id="photo04">
+               		          <div class= "container">
+               			            <img src= "img/ux/hikewithme/Hike-login.png" alt="Hiking Application prototype"/>
+               			              <a class= "lightbox-close" href= "#">X</a>
+               		               </div>
+               	               </div> -->
+                             </div>
+
+
+                      <div class="UX | UI column">
+                        <a class= "lightbox" href="#photo11">
+                          <figure class= "photo11"><h4>Info Card Component</h4></figure>
+                        </a>
+
+                        <!-- <div class= "lightbox-target" id="photo11">
+                          <div class= "container">
+                            <img src= "img/ux/info-card.png" alt="Slider component"/>
+                            <a class= "lightbox-close" href= "#">X</a>
+                          </div>
+                        </div> -->
+                      </div>
+
+                      <div class="UX | UI column">
+                        <a class= "lightbox" href="#photo12">
+                          <figure class= "photo12"><h4>Post-it Component</h4></figure>
+                        </a>
+
+                        <!-- <div class= "lightbox-target" id="photo12">
+                          <div class= "container">
+                            <img src= "img/ux/post-it.png" alt="Slider component"/>
+                            <a class= "lightbox-close" href= "#">X</a>
+                          </div>
+                        </div> -->
+                      </div>
+
+                      <div class="Web Development column">
+                        <a class= "lightbox" href="#photo13">
+                          <figure class= "photo13"><h4>Monte Vista Website</h4><p><a class="case-study" href="#">Read case study</a></p></figure>
+                        </a>
+
+                        <!-- <div class= "lightbox-target" id="photo13">
+                          <div class= "container">
+                            <img src= "img/webDesign/honduran.png" alt="Slider component"/>
+                            <a class= "lightbox-close" href= "#">X</a>
+                          </div>
+                        </div> -->
+                      </div>
+
+
+
+
+                      <div class="Graphic Design column">
+                        <a class= "lightbox" href="#photo06">
+                           <figure class= "photo15"><h4>Halt Oil gif created for Skin Alchemy</h4></figure>
+                         </a>
+
+                         <!-- <div class= "lightbox-target" id="photo06">
+                            <div class= "container">
+                                <img src="img/graphic/coffee-gif.gif" alt="Coffee Addict gif"/>
+                                  <a class= "lightbox-close" href= "#">X</a>
+                            </div>
+                          </div> -->
+                        </div>
+
+                    </div>
+                  </div><!-- end of main -->
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  <script src="js/main.js"></script>
+  <script src="js/work.js"></script>
+
+  </body>
+</html>
